@@ -259,6 +259,41 @@
             color: var(--text-muted);
         }
 
+        .notes-list {
+            list-style: none;
+        }
+
+        .note-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .note-item:last-child {
+            border-bottom: none;
+        }
+
+        .note-title {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .note-meta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-light);
+            margin-bottom: 0.6rem;
+        }
+
+        .note-desc {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
         .contact-info {
             font-family: var(--font-sans);
             font-size: 1.1rem;
@@ -363,6 +398,7 @@
         <nav class="nav-menu">
             <a class="nav-link active" data-target="about">About</a>
             <a class="nav-link" data-target="publications">Publications</a>
+            <a class="nav-link" data-target="notes">Notes</a>
             <a class="nav-link" data-target="contact">Contact</a>
         </nav>
 
@@ -459,6 +495,23 @@
                     <span class="bib-authors">Yu Hsun Chen, <strong>Jinbo Zhang</strong>, et al.</span>
                     <span class="bib-title">Liquid Metal Printed 2D ITO for Nanophotonic Applications.</span>
                     <span class="bib-status">Poster presented at UCI Undergraduate Research Symposium, May 2025.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="notes" class="page-section">
+            <h1 class="section-title">Notes</h1>
+
+            <ul class="notes-list">
+                <li class="note-item">
+                    <div class="note-title">
+                        <a href="QFT_notes.pdf" target="_blank" rel="noopener noreferrer">Quantum Field Theory Notes</a>
+                    </div>
+                    <div class="note-meta">PDF Note</div>
+                    <p class="note-desc">
+                        Personal study notes on quantum field theory. This section will expand as I add more reading notes and technical summaries.
+                    </p>
+                    <a href="QFT_notes.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
                 </li>
             </ul>
         </section>
