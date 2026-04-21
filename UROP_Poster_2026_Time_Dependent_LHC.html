@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Dependent Signals of New Physics at the LHC</title>
+    <style>
+        :root {
+            --bg: #f6f7f8;
+            --panel: #ffffff;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --accent: #004b87;
+            --border: #d9dde3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--panel);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+        }
+
+        .title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .actions a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .viewer {
+            width: 100%;
+            height: calc(100vh - 69px);
+            border: 0;
+            background: #fff;
+        }
+
+        .fallback {
+            padding: 1.5rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div>
+            <div class="title">Time-Dependent Signals of New Physics at the LHC</div>
+            <div class="meta">UCI Undergraduate Research Symposium 2026 Poster</div>
+        </div>
+        <div class="actions">
+            <a href="UROP_Poster_2026_Time_Dependent_LHC.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+        </div>
+    </div>
+
+    <iframe
+        class="viewer"
+        src="UROP_Poster_2026_Time_Dependent_LHC.pdf#view=FitH"
+        title="Time-Dependent Signals of New Physics at the LHC poster preview">
+    </iframe>
+
+    <div class="fallback">
+        If the embedded preview does not load in your browser, use the "Open PDF" link above.
+    </div>
+</body>
+</html>
