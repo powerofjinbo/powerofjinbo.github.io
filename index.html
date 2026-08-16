@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jinbo Zhang | Undergraduate researcher at UCI. Research in particle physics, BSM phenomenology, and machine learning for collider physics.">
+    <meta name="description" content="Jinbo Zhang | Physics undergraduate at UC Irvine. Research in experimental high-energy physics: muon-beam dark matter searches, Higgs precision measurements at FCC-ee, and machine learning for new-physics searches at the LHC.">
     <title>Jinbo Zhang | UCI</title>
 
     <!-- FontAwesome -->
@@ -294,6 +294,73 @@
             color: var(--text-muted);
         }
 
+        .research-list {
+            list-style: none;
+        }
+
+        .research-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .research-title {
+            font-family: var(--font-sans);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .research-meta {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .research-desc {
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .research-links {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .edu-detail {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .honors-list {
+            list-style: none;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .honors-list li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .honors-list li::before {
+            content: '\2014';
+            position: absolute;
+            left: 0;
+            color: var(--text-light);
+        }
+
         .contact-info {
             font-family: var(--font-sans);
             font-size: 1.1rem;
@@ -406,6 +473,7 @@
 
         <nav class="nav-menu">
             <a class="nav-link active" data-target="about">About</a>
+            <a class="nav-link" data-target="research">Research</a>
             <a class="nav-link" data-target="publications">Publications</a>
             <a class="nav-link" data-target="notes">Notes</a>
             <a class="nav-link" data-target="contact">Contact</a>
@@ -422,16 +490,40 @@
 
             <div class="intro-block">
                 <p>
-                    I am Jinbo Zhang, an undergraduate researcher at the University of California, Irvine. I am currently preparing for
-                    Fall 2027 PhD applications in experimental high-energy physics, with a primary research focus on particle physics,
-                    beyond-the-Standard-Model phenomenology, and machine learning for collider physics.
+                    I am an undergraduate physics student at the University of California, Irvine, applying to PhD programs in
+                    experimental high-energy physics for Fall 2027. My research centers on collider physics, dark-matter searches,
+                    and machine learning for particle physics &mdash; in particular, data-driven methods that extend the reach of
+                    precision measurements and searches for new physics.
                 </p>
                 <p>
-                    My recent work spans collider analysis, new-physics phenomenology, and ML-driven discovery pipelines. Although I also
-                    have research experience in astronomy and photonics, the central direction of my current work is high-energy physics,
-                    especially data-driven methods for precision measurements and new-physics searches.
+                    In summer 2026, I was a SURF fellow at Caltech with Profs. Bertrand Echenard and David Hitlin, where I designed
+                    and simulated a muon-beam missing-momentum experiment to search for light dark matter. I currently work with
+                    Prof. Christoph Paus at MIT on the projected precision of Higgs-boson measurements at the proposed FCC-ee
+                    collider, and with Prof. Daniel Whiteson at UCI I led the development of a time-dependent resonance search for
+                    new physics at the LHC, now submitted to <em>Physical Review D</em>.
+                </p>
+                <p>
+                    Earlier in my undergraduate career, I worked in observational astronomy with Prof. Asantha Cooray, analyzing
+                    Herschel-selected dusty star-forming galaxies with ALMA and Spitzer data, and in nanophotonics with
+                    Prof. Howard Lee, fabricating gate-tunable 2D ITO epsilon-near-zero materials. Outside research, I serve as a
+                    Learning Assistant for upper-division classical mechanics and electromagnetism, and as webmaster of the
+                    Society of Physics Students at UCI.
                 </p>
             </div>
+
+            <h2 class="subsection-title">Education</h2>
+            <p>
+                <strong>B.S. in Physics</strong>, University of California, Irvine &mdash; expected June 2027 &middot; GPA 3.83<br>
+                <span class="edu-detail">Graduate coursework: quantum field theory, elementary particle physics, group theory,
+                quantum mechanics, and machine learning &amp; statistics.</span>
+            </p>
+
+            <h2 class="subsection-title">Honors &amp; Awards</h2>
+            <ul class="honors-list">
+                <li>Caltech SURF Scholarship (2026)</li>
+                <li>UCI Undergraduate Research Opportunities Program (UROP) Awards (2024, 2025)</li>
+                <li>Dean's Honor List &mdash; all quarters</li>
+            </ul>
 
             <a href="Jinbo_Zhang_CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">
                 <i class="fas fa-file-pdf"></i> Curriculum Vitae
@@ -443,6 +535,81 @@
                 愿你不仅能欣赏这种文化，也愿意加入这场由人类心智开启的最伟大冒险。
                 <span class="quote-attribution">"物理是我的精神归宿"</span>
             </div>
+        </section>
+
+        <section id="research" class="page-section">
+            <h1 class="section-title">Research</h1>
+
+            <ul class="research-list">
+                <li class="research-item">
+                    <div class="research-title">Muon-Beam Dark Matter Search</div>
+                    <div class="research-meta">Caltech SURF &middot; Profs. Bertrand Echenard &amp; David Hitlin &middot; June &ndash; Aug. 2026</div>
+                    <p class="research-desc">
+                        Designed and simulated an LDMX-style muon-beam missing-momentum experiment for light dark matter: a detailed
+                        Geant4 model of a 40-layer LYSO crystal active target with per-crystal energy-deposition readout, with the
+                        full analysis chain run at the 10<sup>8</sup>-muon scale on a Slurm cluster. I characterized the rare
+                        backgrounds that mimic the signal &mdash; muon bremsstrahlung with photonuclear interactions and hard
+                        muon&ndash;nucleus scattering &mdash; and combined calorimetric vetoes with BDT, graph-neural-network, and
+                        transformer classifiers, reaching &sim;90% signal efficiency with zero surviving background events under a
+                        preregistered statistical-testing protocol. A sole-authored manuscript is in final preparation for arXiv.
+                    </p>
+                </li>
+
+                <li class="research-item">
+                    <div class="research-title">Higgs Precision Measurements at FCC-ee</div>
+                    <div class="research-meta">MIT &middot; Prof. Christoph Paus &middot; Jan. 2026 &ndash; Present</div>
+                    <p class="research-desc">
+                        An end-to-end sensitivity study of &sigma;(ZH) &times; B(H &rarr; WW<sup>*</sup>) in the semileptonic
+                        qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final state at &radic;s = 240 GeV, processing over
+                        10<sup>9</sup> fully simulated events across 32 signal and background processes with the FCCAnalyses
+                        C++/RDataFrame framework. I designed a two-category measurement separating on-shell and off-shell
+                        leptonic-W decay topologies (95&ndash;98% category purity), trained an independent XGBoost classifier per
+                        category (test AUC 0.99), and implemented profile-likelihood inference in pyhf, projecting a 0.55%
+                        precision on the inclusive signal strength.
+                    </p>
+                </li>
+
+                <li class="research-item">
+                    <div class="research-title">Time-Dependent New Physics at the LHC</div>
+                    <div class="research-meta">UC Irvine &middot; Prof. Daniel Whiteson &middot; May 2025 &ndash; May 2026</div>
+                    <p class="research-desc">
+                        Led the development of a time-dependent resonance search strategy that introduces event time as an
+                        auxiliary feature, improving sensitivity beyond mass-only searches. We extended CATHODE-based anomaly
+                        detection to model backgrounds in invariant-mass and time sidebands, simulated signal and background
+                        processes with MadGraph5, Pythia8, and Delphes, and quantified the sensitivity gains through classifier
+                        performance, sideband closure diagnostics, and expected upper limits on the signal strength.
+                    </p>
+                    <p class="research-links">
+                        <a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">arXiv:2605.11071</a> &middot;
+                        <a href="UROP_Poster_2026_Time_Dependent_LHC.html" target="_blank" rel="noopener noreferrer">Poster</a>
+                    </p>
+                </li>
+
+                <li class="research-item">
+                    <div class="research-title">High-Redshift Galaxy Evolution</div>
+                    <div class="research-meta">UC Irvine &middot; Prof. Asantha Cooray &middot; Dec. 2024 &ndash; Sep. 2025</div>
+                    <p class="research-desc">
+                        Analyzed photometric data from the Spitzer and ALMA telescopes to constrain the redshift distribution and
+                        physical properties of Herschel-selected ultra-red dusty star-forming galaxies, and developed automated
+                        pipelines in Python and CARTA to visualize spectral energy distributions and interpret high-redshift
+                        signals.
+                    </p>
+                </li>
+
+                <li class="research-item">
+                    <div class="research-title">Epsilon-Near-Zero Nanophotonics</div>
+                    <div class="research-meta">UC Irvine &middot; Prof. Howard Lee &middot; Feb. 2024 &ndash; Sep. 2025</div>
+                    <p class="research-desc">
+                        Fabricated gate-tunable two-dimensional indium tin oxide (ITO) films by liquid-metal printing for
+                        epsilon-near-zero applications, and characterized the optical nonlinearity and tunability of ENZ
+                        metasurfaces for next-generation nanophotonic devices.
+                    </p>
+                    <p class="research-links">
+                        <a href="https://doi.org/10.1117/12.3066162" target="_blank" rel="noopener noreferrer">Proc. SPIE</a> &middot;
+                        <a href="UROP_Poster_2025_2D_ITO.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
+                    </p>
+                </li>
+            </ul>
         </section>
 
         <section id="publications" class="page-section">
@@ -457,49 +624,63 @@
                     </span>
                     <span class="bib-status"><a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">arXiv:2605.11071</a>, submitted to Physical Review D (2026).</span>
                 </li>
-
-                <li class="bib-item">
-                    <span class="bib-authors">Euclid Collaboration: X. Xu, R. Chen, T. Li, A. R. Cooray, et al., <strong>J. Zhang</strong>, et al.</span>
-                    <span class="bib-title">
-                        <a href="https://arxiv.org/abs/2604.06648" target="_blank">AgileLens: A scalable CNN-based pipeline for strong gravitational lens identification.</a>
-                    </span>
-                    <span class="bib-status"><a href="https://arxiv.org/abs/2604.06648" target="_blank">arXiv:2604.06648</a> (2026).</span>
-                </li>
-
-                <li class="bib-item">
-                    <span class="bib-authors">Christopher M. Gonzalez, Yu-Hsun Chen, Christopher Effarah, <strong>Jinbo Zhang</strong>, A. Anopchenko, et al.</span>
-                    <span class="bib-title">
-                        <a href="https://doi.org/10.1117/12.3066162" target="_blank">Gate-tunable two-dimensional ITO epsilon-near-zero materials fabricated by liquid metal printing.</a>
-                    </span>
-                    <span class="bib-status"><a href="https://doi.org/10.1117/12.3066162" target="_blank">Proc. SPIE PC13579</a>, PC135791B (2025).</span>
-                </li>
-
-                <li class="bib-item">
-                    <span class="bib-authors">Ho Wai (Howard) Lee, Quynh Dang, David Dang, A. Anopchenko, Christopher Gonzalez, et al.</span>
-                    <span class="bib-title">
-                        <a href="https://doi.org/10.1117/12.3091053" target="_blank">Active and nonlinear epsilon-near-zero photonics.</a>
-                    </span>
-                    <span class="bib-status"><a href="https://doi.org/10.1117/12.3091053" target="_blank">Proc. SPIE PC13892</a> (2026).</span>
-                </li>
             </ul>
 
             <h2 class="subsection-title">Work in Progress</h2>
             <ul class="bib-list">
                 <li class="bib-item">
-                    <span class="bib-authors">Rouiela Myles Valencia, Guowen Xing, Anagha Subbaraman, <strong>Jinbo Zhang</strong>, Asantha Cooray, Tom Bakx.</span>
-                    <span class="bib-title">The redshift distribution and physical properties of Herschel-selected ultrared dusty, star-forming galaxies with ALMA Band-3 spectral scans.</span>
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
+                    <span class="bib-status">In final preparation for arXiv submission (2026).</span>
+                </li>
+
+                <li class="bib-item">
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-title">Prospects for the measurement of H &rarr; WW<sup>*</sup> in the qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final state at FCC-ee.</span>
                     <span class="bib-status">In Preparation (2026).</span>
                 </li>
 
                 <li class="bib-item">
-                    <span class="bib-authors"><strong>Jinbo Zhang</strong>, Jan Eysermans, Sara Aumiller.</span>
-                    <span class="bib-title">Measurement of H -> WW* in the qq l nu qq' final state at the FCC-ee.</span>
+                    <span class="bib-authors">Rouiela Myles Valencia, Guowen Xing, Anagha Subbaraman, <strong>Jinbo Zhang</strong>, Asantha Cooray, Tom Bakx.</span>
+                    <span class="bib-title">The redshift distribution and physical properties of Herschel-selected ultrared dusty, star-forming galaxies with ALMA Band-3 spectral scans.</span>
                     <span class="bib-status">In Preparation (2026).</span>
                 </li>
             </ul>
 
-            <h2 class="subsection-title">Posters</h2>
+            <h2 class="subsection-title">Other Work</h2>
             <ul class="bib-list">
+                <li class="bib-item">
+                    <span class="bib-authors">Euclid Collaboration: X. Xu, R. Chen, T. Li, A. R. Cooray, et al., <strong>J. Zhang</strong>, et al.</span>
+                    <span class="bib-title">
+                        <a href="https://arxiv.org/abs/2604.06648" target="_blank" rel="noopener noreferrer">Euclid Quick Data Release (Q1). AgileLens: A scalable CNN-based pipeline for strong gravitational lens identification.</a>
+                    </span>
+                    <span class="bib-status"><a href="https://arxiv.org/abs/2604.06648" target="_blank" rel="noopener noreferrer">arXiv:2604.06648</a> (2026).</span>
+                </li>
+
+                <li class="bib-item">
+                    <span class="bib-authors">Christopher M. Gonzalez, Yu-Hsun Chen, Christopher Effarah, <strong>Jinbo Zhang</strong>, A. Anopchenko, et al.</span>
+                    <span class="bib-title">
+                        <a href="https://doi.org/10.1117/12.3066162" target="_blank" rel="noopener noreferrer">Gate-tunable two-dimensional ITO epsilon-near-zero materials fabricated by liquid metal printing.</a>
+                    </span>
+                    <span class="bib-status"><a href="https://doi.org/10.1117/12.3066162" target="_blank" rel="noopener noreferrer">Proc. SPIE PC13579</a>, PC135791B (2025).</span>
+                </li>
+
+                <li class="bib-item">
+                    <span class="bib-authors">Ho Wai (Howard) Lee, Quynh Dang, David Dang, A. Anopchenko, Christopher Gonzalez, et al., incl. <strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-title">
+                        <a href="https://doi.org/10.1117/12.3091053" target="_blank" rel="noopener noreferrer">Active and nonlinear epsilon-near-zero photonics.</a>
+                    </span>
+                    <span class="bib-status"><a href="https://doi.org/10.1117/12.3091053" target="_blank" rel="noopener noreferrer">Proc. SPIE PC13892</a> (2026).</span>
+                </li>
+            </ul>
+
+            <h2 class="subsection-title">Posters &amp; Talks</h2>
+            <ul class="bib-list">
+                <li class="bib-item">
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
+                    <span class="bib-status">Final research talk, Caltech SURF program, California Institute of Technology, August 2026.</span>
+                </li>
                 <li class="bib-item">
                     <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
                     <span class="bib-title">
