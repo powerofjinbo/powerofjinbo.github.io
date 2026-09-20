@@ -499,8 +499,8 @@
                     In summer 2026, I was a SURF fellow at Caltech with Profs. Bertrand Echenard and David Hitlin, where I designed
                     and simulated a muon-beam missing-momentum experiment to search for light dark matter. I currently work with
                     Prof. Christoph Paus at MIT on the projected precision of Higgs-boson measurements at the proposed FCC-ee
-                    collider, and with Prof. Daniel Whiteson at UCI I led the development of a time-dependent resonance search for
-                    new physics at the LHC, now submitted to <em>Physical Review D</em>.
+                    collider, and with Prof. Daniel Whiteson at UCI I co-developed a time-dependent resonance search for
+                    new physics at the LHC, now under review at <em>Physical Review D</em>.
                 </p>
                 <p>
                     Earlier in my undergraduate career, I worked in observational astronomy with Prof. Asantha Cooray, analyzing
@@ -513,16 +513,37 @@
 
             <h2 class="subsection-title">Education</h2>
             <p>
-                <strong>B.S. in Physics</strong>, University of California, Irvine &mdash; expected June 2027 &middot; GPA 3.83<br>
-                <span class="edu-detail">Graduate coursework: quantum field theory, elementary particle physics, group theory,
-                quantum mechanics, and machine learning &amp; statistics.</span>
+                <strong>B.S. in Physics</strong>, University of California, Irvine &mdash; expected June 2027 &middot; GPA 3.81/4.00<br>
+                <span class="edu-detail">Dean's Honor List, six quarters. Graduate coursework: quantum field theory, quantum mechanics,
+                group theory, and machine learning &amp; statistics.</span>
+            </p>
+
+            <h2 class="subsection-title">Research Interests</h2>
+            <p class="edu-detail">
+                High-energy physics (HEP) &middot; AI/ML for HEP &middot; BSM phenomenology &middot; Dark-matter searches
             </p>
 
             <h2 class="subsection-title">Honors &amp; Awards</h2>
             <ul class="honors-list">
-                <li>Caltech SURF Scholarship (2026)</li>
-                <li>UCI Undergraduate Research Opportunities Program (UROP) Awards (2024, 2025)</li>
-                <li>Dean's Honor List &mdash; all quarters</li>
+                <li>Caltech Summer Undergraduate Research Fellowship (SURF), 2026</li>
+                <li>UCI Undergraduate Research Opportunities Program (UROP) Award, two consecutive years (2024, 2025)</li>
+                <li>Dean's Honor List, University of California, Irvine &mdash; six quarters (2024&ndash;2026)</li>
+            </ul>
+
+            <h2 class="subsection-title">Technical Skills</h2>
+            <ul class="honors-list">
+                <li><strong>HEP simulation &amp; analysis:</strong> Geant4, MadGraph5, Pythia8, Delphes, FCCAnalyses, ROOT (PyROOT, RDataFrame), pyhf</li>
+                <li><strong>Machine learning:</strong> PyTorch, XGBoost, graph neural networks, transformers, weakly supervised anomaly detection (CATHODE)</li>
+                <li><strong>Programming &amp; computing:</strong> Python, C++, NumPy/Pandas, Slurm-based HPC, Git</li>
+                <li><strong>Languages:</strong> Chinese (native), English (professional)</li>
+            </ul>
+
+            <h2 class="subsection-title">Teaching &amp; Leadership</h2>
+            <ul class="honors-list">
+                <li><strong>Learning Assistant</strong>, Classical Mechanics and Electromagnetism, UCI Department of Physics and Astronomy (Jan. 2025 &ndash; Present) &mdash;
+                    lead weekly discussion and laboratory sections for upper-division mechanics and electromagnetism.</li>
+                <li><strong>Webmaster</strong>, Society of Physics Students at UCI, executive board (2026 &ndash; 2027) &mdash;
+                    maintain the chapter website and publish events, resources, and outreach materials.</li>
             </ul>
 
             <a href="Jinbo_Zhang_CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-link">
@@ -543,15 +564,18 @@
             <ul class="research-list">
                 <li class="research-item">
                     <div class="research-title">Muon-Beam Dark Matter Search</div>
-                    <div class="research-meta">Caltech SURF &middot; Profs. Bertrand Echenard &amp; David Hitlin &middot; June &ndash; Aug. 2026</div>
+                    <div class="research-meta">Caltech SURF &middot; Profs. Bertrand Echenard &amp; David Hitlin &middot; June 2026 &ndash; Present</div>
                     <p class="research-desc">
-                        Designed and simulated an LDMX-style muon-beam missing-momentum experiment for light dark matter: a detailed
-                        Geant4 model of a 40-layer LYSO crystal active target with per-crystal energy-deposition readout, with the
-                        full analysis chain run at the 10<sup>8</sup>-muon scale on a Slurm cluster. I characterized the rare
-                        backgrounds that mimic the signal &mdash; muon bremsstrahlung with photonuclear interactions and hard
-                        muon&ndash;nucleus scattering &mdash; and combined calorimetric vetoes with BDT, graph-neural-network, and
-                        transformer classifiers, reaching &sim;90% signal efficiency with zero surviving background events under a
-                        preregistered statistical-testing protocol. A sole-authored manuscript is in final preparation for arXiv.
+                        Built, in an eight-week program, the complete simulation and analysis chain for an LDMX-style muon-beam
+                        missing-momentum experiment: a full Geant4 model (40-layer LYSO active target with per-crystal readout,
+                        electromagnetic and hadronic calorimeters) and a 10<sup>8</sup>-muon background campaign on a Slurm cluster.
+                        I mapped the rare-background landscape at the one-in-10<sup>8</sup> level, identifying muon bremsstrahlung
+                        with photonuclear interactions and hard muon&ndash;nucleus scattering with escaping neutrons as the
+                        irreducible processes, and traced every surviving event topology to its physical mechanism. I then designed a
+                        625-node graph neural network over the full detector and benchmarked it against calorimetric vetoes, BDTs,
+                        and transformers, establishing a background-free working point at 10<sup>8</sup> muons with &sim;90% signal
+                        efficiency under a preregistered model-selection and validation protocol. First author of the resulting
+                        manuscript; invited to present the results to the LDMX Collaboration.
                     </p>
                 </li>
 
@@ -559,13 +583,15 @@
                     <div class="research-title">Higgs Precision Measurements at FCC-ee</div>
                     <div class="research-meta">MIT &middot; Prof. Christoph Paus &middot; Jan. 2026 &ndash; Present</div>
                     <p class="research-desc">
-                        An end-to-end sensitivity study of &sigma;(ZH) &times; B(H &rarr; WW<sup>*</sup>) in the semileptonic
-                        qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final state at &radic;s = 240 GeV, processing over
-                        10<sup>9</sup> fully simulated events across 32 signal and background processes with the FCCAnalyses
-                        C++/RDataFrame framework. I designed a two-category measurement separating on-shell and off-shell
-                        leptonic-W decay topologies (95&ndash;98% category purity), trained an independent XGBoost classifier per
-                        category (test AUC 0.99), and implemented profile-likelihood inference in pyhf, projecting a 0.55%
-                        precision on the inclusive signal strength.
+                        Conceived and led, as first author, a complete projected measurement of &sigma;(ZH) &times;
+                        B(H &rarr; WW<sup>*</sup>) in the semileptonic qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final
+                        state at &radic;s = 240 GeV (10.8 ab<sup>&minus;1</sup>, IDEA detector), owning the full chain from event
+                        selection to final fit and processing over 10<sup>9</sup> fully simulated events across 32 signal and
+                        background processes in FCCAnalyses. The analysis reaches a sub-percent projected precision on the signal
+                        strength (&delta;&mu;/&mu; = 0.595%) from a 20-bin profile-likelihood fit in pyhf, hardened with Asimov
+                        closure, likelihood scans, cross-validation, and systematic selection scans. I invented a Z-priority
+                        jet-pairing algorithm that uses the on-shell Z to resolve the off-shell W<sup>*</sup> topology, and trained
+                        an XGBoost classifier on 26 kinematic observables (five-fold out-of-fold AUC = 0.975).
                     </p>
                 </li>
 
@@ -573,11 +599,13 @@
                     <div class="research-title">Time-Dependent New Physics at the LHC</div>
                     <div class="research-meta">UC Irvine &middot; Prof. Daniel Whiteson &middot; May 2025 &ndash; May 2026</div>
                     <p class="research-desc">
-                        Led the development of a time-dependent resonance search strategy that introduces event time as an
-                        auxiliary feature, improving sensitivity beyond mass-only searches. We extended CATHODE-based anomaly
-                        detection to model backgrounds in invariant-mass and time sidebands, simulated signal and background
-                        processes with MadGraph5, Pythia8, and Delphes, and quantified the sensitivity gains through classifier
-                        performance, sideband closure diagnostics, and expected upper limits on the signal strength.
+                        Co-developed a new resonance-search paradigm that adds event time as an analysis dimension, opening
+                        sensitivity to temporally modulated signals that conventional mass-only searches cannot see. We extended
+                        CATHODE weakly supervised anomaly detection from one to two dimensions, learning background distributions
+                        jointly in invariant-mass and time sidebands for fully data-driven searches. I built the complete
+                        simulation-to-limits pipeline (MadGraph5, Pythia8, Delphes, classifier training, sideband-closure
+                        diagnostics, expected upper limits) and produced the sensitivity comparisons between mass-only and
+                        mass-plus-time strategies that underpin the paper, now under review at <em>Physical Review D</em>.
                     </p>
                     <p class="research-links">
                         <a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">arXiv:2605.11071</a> &middot;
@@ -589,10 +617,9 @@
                     <div class="research-title">High-Redshift Galaxy Evolution</div>
                     <div class="research-meta">UC Irvine &middot; Prof. Asantha Cooray &middot; Dec. 2024 &ndash; Sep. 2025</div>
                     <p class="research-desc">
-                        Analyzed photometric data from the Spitzer and ALMA telescopes to constrain the redshift distribution and
-                        physical properties of Herschel-selected ultra-red dusty star-forming galaxies, and developed automated
-                        pipelines in Python and CARTA to visualize spectral energy distributions and interpret high-redshift
-                        signals.
+                        Analyzed Spitzer and ALMA photometry of Herschel-selected ultrared dusty star-forming galaxies and built
+                        automated Python/CARTA pipelines for spectral-energy-distribution fitting; co-author on the resulting
+                        manuscript.
                     </p>
                 </li>
 
@@ -600,9 +627,8 @@
                     <div class="research-title">Epsilon-Near-Zero Nanophotonics</div>
                     <div class="research-meta">UC Irvine &middot; Prof. Howard Lee &middot; Feb. 2024 &ndash; Sep. 2025</div>
                     <p class="research-desc">
-                        Fabricated gate-tunable two-dimensional indium tin oxide (ITO) films by liquid-metal printing for
-                        epsilon-near-zero applications, and characterized the optical nonlinearity and tunability of ENZ
-                        metasurfaces for next-generation nanophotonic devices.
+                        Fabricated gate-tunable two-dimensional indium tin oxide (ITO) films by liquid-metal printing and
+                        characterized their nonlinear optical response; co-author on two SPIE proceedings and a symposium poster.
                     </p>
                     <p class="research-links">
                         <a href="https://doi.org/10.1117/12.3066162" target="_blank" rel="noopener noreferrer">Proc. SPIE</a> &middot;
@@ -622,28 +648,28 @@
                     <span class="bib-title">
                         <a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">Time-dependent signals of new physics at the LHC.</a>
                     </span>
-                    <span class="bib-status"><a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">arXiv:2605.11071</a>, submitted to Physical Review D (2026).</span>
+                    <span class="bib-status"><a href="https://arxiv.org/abs/2605.11071" target="_blank" rel="noopener noreferrer">arXiv:2605.11071</a> (2026). Under review at Physical Review D (revised manuscript).</span>
                 </li>
             </ul>
 
             <h2 class="subsection-title">Work in Progress</h2>
             <ul class="bib-list">
                 <li class="bib-item">
-                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>, Bertrand Echenard, David G. Hitlin.</span>
                     <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
-                    <span class="bib-status">In final preparation for arXiv submission (2026).</span>
+                    <span class="bib-status">LDMX Collaboration internal note (2026). First author &middot; Caltech SURF final report, posted to the LDMX document database &middot; Draft available on request.</span>
                 </li>
 
                 <li class="bib-item">
-                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
-                    <span class="bib-title">Prospects for the measurement of H &rarr; WW<sup>*</sup> in the qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final state at FCC-ee.</span>
-                    <span class="bib-status">In Preparation (2026).</span>
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>, Jan Eysermans, Sara Aumiller, Christoph Paus.</span>
+                    <span class="bib-title">Measurement of H &rarr; WW<sup>*</sup> in the qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final state at FCC-ee.</span>
+                    <span class="bib-status">(2026). First author &middot; Manuscript complete; to be released as an FCC-ee note &middot; Draft available on request.</span>
                 </li>
 
                 <li class="bib-item">
                     <span class="bib-authors">Rouiela Myles Valencia, Guowen Xing, Anagha Subbaraman, <strong>Jinbo Zhang</strong>, Asantha Cooray, Tom Bakx.</span>
                     <span class="bib-title">The redshift distribution and physical properties of Herschel-selected ultrared dusty, star-forming galaxies with ALMA Band-3 spectral scans.</span>
-                    <span class="bib-status">In Preparation (2026).</span>
+                    <span class="bib-status">In preparation.</span>
                 </li>
             </ul>
 
@@ -674,8 +700,13 @@
                 </li>
             </ul>
 
-            <h2 class="subsection-title">Posters &amp; Talks</h2>
+            <h2 class="subsection-title">Talks &amp; Posters</h2>
             <ul class="bib-list">
+                <li class="bib-item">
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
+                    <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
+                    <span class="bib-status">Invited talk, LDMX Collaboration meeting, Fall 2026.</span>
+                </li>
                 <li class="bib-item">
                     <span class="bib-authors"><strong>Jinbo Zhang</strong>.</span>
                     <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
@@ -689,7 +720,7 @@
                     <span class="bib-status">Poster presented at UCI Undergraduate Research Symposium, May 2026.</span>
                 </li>
                 <li class="bib-item">
-                    <span class="bib-authors">Yu Hsun Chen, <strong>Jinbo Zhang</strong>, et al.</span>
+                    <span class="bib-authors">Yu-Hsun Chen, <strong>Jinbo Zhang</strong>, et al.</span>
                     <span class="bib-title">
                         <a href="UROP_Poster_2025_2D_ITO.pdf" target="_blank" rel="noopener noreferrer">Liquid Metal Printed 2D ITO for Nanophotonic Applications.</a>
                     </span>
