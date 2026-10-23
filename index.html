@@ -336,6 +336,49 @@
             text-align: left;
         }
 
+        .research-intro {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .research-figure {
+            margin: 1rem 0 1.25rem 0;
+        }
+
+        .research-figure img {
+            display: block;
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: #ffffff;
+            padding: 0.5rem;
+        }
+
+        .research-figure figcaption {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            max-width: 720px;
+        }
+
+        .research-contrib {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .research-contrib strong {
+            color: var(--text-main);
+        }
+
+        .link-pending {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
         .edu-detail {
             font-size: 0.95rem;
             color: var(--text-muted);
@@ -561,40 +604,95 @@
         <section id="research" class="page-section">
             <h1 class="section-title">Research</h1>
 
+            <p class="research-intro">
+                Three first-author projects in experimental high-energy physics, each with a short summary, a representative
+                figure, and my role. Full manuscripts are linked where they have been cleared for public release.
+            </p>
+
+            <h2 class="subsection-title">First-Author Research</h2>
             <ul class="research-list">
                 <li class="research-item">
-                    <div class="research-title">Muon-Beam Dark Matter Search</div>
-                    <div class="research-meta">Caltech SURF &middot; Profs. Bertrand Echenard &amp; David Hitlin &middot; June 2026 &ndash; Present</div>
+                    <div class="research-title">A Muon Missing-Momentum Experiment</div>
+                    <div class="research-meta">J. Zhang, B. Echenard, D. G. Hitlin &middot; Caltech SURF &middot; 2026</div>
                     <p class="research-desc">
-                        Built, in an eight-week program, the complete simulation and analysis chain for an LDMX-style muon-beam
-                        missing-momentum experiment: a full Geant4 model (40-layer LYSO active target with per-crystal readout,
-                        electromagnetic and hadronic calorimeters) and a 10<sup>8</sup>-muon background campaign on a Slurm cluster.
-                        I mapped the rare-background landscape at the one-in-10<sup>8</sup> level, identifying muon bremsstrahlung
-                        with photonuclear interactions and hard muon&ndash;nucleus scattering with escaping neutrons as the
-                        irreducible processes, and traced every surviving event topology to its physical mechanism. I then designed a
-                        625-node graph neural network over the full detector and benchmarked it against calorimetric vetoes, BDTs,
-                        and transformers, establishing a background-free working point at 10<sup>8</sup> muons with &sim;90% signal
-                        efficiency under a preregistered model-selection and validation protocol. First author of the resulting
-                        manuscript; invited to present the results to the LDMX Collaboration.
+                        A muon beam extends the missing-momentum search for light dark matter to muon-philic forces that
+                        electron-beam experiments cannot see, but only if rare backgrounds can be rejected. Starting from the LDMX
+                        design, I replaced the passive target with a 40-layer active LYSO target, closed it in azimuth with a side
+                        hadronic calorimeter, and followed 10<sup>8</sup> simulated 5&nbsp;GeV/<i>c</i> muons through the full veto
+                        chain. Three target-level cuts reach a background acceptance of 1.2&times;10<sup>&minus;4</sup> at 92.7%
+                        signal efficiency; a graph neural network over the 625 readout channels then leaves a mean of 1.6
+                        background events at 90% signal efficiency, and none in four of five trainings at a tightened working
+                        point. The hardest survivors are muon&ndash;nuclear interactions with energetic neutrons, which the
+                        delayed timing of their calorimeter deposits removes.
+                    </p>
+                    <figure class="research-figure">
+                        <img src="figures/muon_setup.png" alt="Side and transverse views of the simulated muon missing-momentum detector: active LYSO target, ECal, side and downstream hadronic calorimeters" loading="lazy">
+                        <figcaption>The simulated detector, to scale: active LYSO target, ECal, and side and downstream hadronic calorimeters.</figcaption>
+                    </figure>
+                    <p class="research-contrib">
+                        <strong>My contribution:</strong> designed the detector concept and wrote the full Geant4 simulation,
+                        ran the 10<sup>8</sup>-event background campaign on a Slurm cluster, built the cut-based selection and
+                        the GNN classifier with its preregistered validation protocol, and wrote the manuscript. Invited talk at
+                        the LDMX Collaboration meeting, October 2026.
+                    </p>
+                    <p class="research-links">
+                        <!-- After approval: replace the span below with
+                             <a href="GOOGLE_DRIVE_LINK" target="_blank" rel="noopener noreferrer">PDF</a> -->
+                        <span class="link-pending">PDF available on request</span>
                     </p>
                 </li>
 
                 <li class="research-item">
-                    <div class="research-title">Higgs Precision Measurements at FCC-ee</div>
-                    <div class="research-meta">MIT &middot; Prof. Christoph Paus &middot; Jan. 2026 &ndash; Present</div>
+                    <div class="research-title">Measurement of H &rarr; WW<sup>*</sup> in the qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; Final State at FCC-ee</div>
+                    <div class="research-meta">J. Zhang, J. Eysermans, et al. &middot; MIT, Prof. Christoph Paus &middot; 2026</div>
                     <p class="research-desc">
-                        Conceived and led, as first author, a complete projected measurement of &sigma;(ZH) &times;
-                        B(H &rarr; WW<sup>*</sup>) in the semileptonic qq&#772;&thinsp;&#8467;&nu;&thinsp;qq&#772;&prime; final
-                        state at &radic;s = 240 GeV (10.8 ab<sup>&minus;1</sup>, IDEA detector), owning the full chain from event
-                        selection to final fit and processing over 10<sup>9</sup> fully simulated events across 32 signal and
-                        background processes in FCCAnalyses. The analysis reaches a sub-percent projected precision on the signal
-                        strength (&delta;&mu;/&mu; = 0.595%) from a 20-bin profile-likelihood fit in pyhf, hardened with Asimov
-                        closure, likelihood scans, cross-validation, and systematic selection scans. I invented a Z-priority
-                        jet-pairing algorithm that uses the on-shell Z to resolve the off-shell W<sup>*</sup> topology, and trained
-                        an XGBoost classifier on 26 kinematic observables (five-fold out-of-fold AUC = 0.975).
+                        A projected measurement of &sigma;(ZH)&nbsp;&times;&nbsp;B(H&nbsp;&rarr;&nbsp;WW<sup>*</sup>) in the
+                        semileptonic final state at the proposed FCC-ee collider (&radic;s&nbsp;=&nbsp;240&nbsp;GeV,
+                        10.8&nbsp;ab<sup>&minus;1</sup>, IDEA detector). Because one W boson from the Higgs is far off shell,
+                        the leptonic W can be either the on-shell or the off-shell boson; the reconstructed leptonic W mass
+                        separates the two topologies event by event, and the analysis is built around these two categories.
+                        Jets are paired with a Z-priority algorithm that anchors on the on-shell Z, a boosted decision tree is
+                        trained in each category, and a simultaneous profile-likelihood fit yields an expected precision of
+                        &delta;&mu;/&mu;&nbsp;=&nbsp;0.545% on the signal strength, compared with 1.48% for the published
+                        fully hadronic analysis of the same decay.
+                    </p>
+                    <figure class="research-figure">
+                        <img src="figures/fcc_boson_masses.png" alt="Reconstructed Z, hadronic W, leptonic W and Higgs candidate masses for signal and WW background after Z-priority pairing" loading="lazy">
+                        <figcaption>Reconstructed boson masses after Z-priority pairing; the bimodal W spectra of the signal reflect the on-shell/off-shell structure of H&nbsp;&rarr;&nbsp;WW<sup>*</sup>.</figcaption>
+                    </figure>
+                    <p class="research-contrib">
+                        <strong>My contribution:</strong> conceived and led the analysis end to end in FCCAnalyses &mdash; event
+                        selection over 32 simulated processes, the leptonic-W-mass categorization, the Z-priority jet pairing,
+                        the per-category classifiers, and the pyhf statistical model with its closure and stability tests &mdash;
+                        and wrote the manuscript.
+                    </p>
+                    <p class="research-links">
+                        <!-- After approval: replace the span below with
+                             <a href="GOOGLE_DRIVE_LINK" target="_blank" rel="noopener noreferrer">PDF</a> -->
+                        <span class="link-pending">PDF available on request</span>
                     </p>
                 </li>
 
+                <li class="research-item">
+                    <div class="research-title">Canto: A Graph Neural Network Tracker for Displaced Particles</div>
+                    <div class="research-meta">J. Zhang, A. Frankenthal &middot; UC Irvine Honors Thesis &middot; 2026</div>
+                    <p class="research-desc">
+                        Graph-neural-network trackers trained on Standard Model events lose the displaced tracks produced by
+                        long-lived particles. I traced the loss through each stage of the Exa.TrkX pipeline and built Canto,
+                        which rebuilds every stage on the helix geometry of a track: a learned helix-triplet graph, a new edge
+                        classifier, and a Mutex-Watershed track builder with learned merging. Trained only on t&#772;t events,
+                        Canto finds 99.1% of displaced heavy-neutral-lepton daughters, more than a baseline trained on the signal
+                        itself, at a lower fake rate. A preregistered study on particles simulated after the design freeze, and
+                        with 200 pileup collisions, confirms the result.
+                    </p>
+                    <p class="research-links">
+                        <span class="link-pending">Manuscript in preparation for submission</span>
+                    </p>
+                </li>
+            </ul>
+
+            <h2 class="subsection-title">Other Research</h2>
+            <ul class="research-list">
                 <li class="research-item">
                     <div class="research-title">Time-Dependent New Physics at the LHC</div>
                     <div class="research-meta">UC Irvine &middot; Prof. Daniel Whiteson &middot; May 2025 &ndash; May 2026</div>
@@ -654,6 +752,12 @@
 
             <h2 class="subsection-title">Work in Progress</h2>
             <ul class="bib-list">
+                <li class="bib-item">
+                    <span class="bib-authors"><strong>Jinbo Zhang</strong>, Andre Frankenthal.</span>
+                    <span class="bib-title">Canto: A Graph Neural Network Tracker for Displaced Particles.</span>
+                    <span class="bib-status">(2026). First author &middot; In final polishing for submission.</span>
+                </li>
+
                 <li class="bib-item">
                     <span class="bib-authors"><strong>Jinbo Zhang</strong>, Bertrand Echenard, David G. Hitlin.</span>
                     <span class="bib-title">A Muon Missing-Momentum Experiment.</span>
